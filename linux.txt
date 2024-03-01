@@ -1,0 +1,50 @@
+pwd => identificar la ruta dónde estamos
+ls => listar archivos y directorios dónde estamos
+ls -l => da más info
+ls -a => ocultos
+ls -la => ocultos y más info
+cd => cambiar de directorio
+cd .. => ir al directorio superior
+clear => limpiar terminal
+touch nombre_archivo => crear archivo
+rm nombre_archivo => eliminar archivo
+nano/vim nombre_archivo => editar archivo
+cat nombre_archivo => mostrar contenido archivo
+echo 'mensaje' => imprimir mensaje o variable
+echo 'mensaje' > fichero.txt => crear un fichero 'fichero.txt' con el contenido del 'mensaje'
+mkdir npmbre_carpeta => crear carpeta 'nombre carpeta'
+cp nombre_fichero_origen ruta_destino => copiar un fichero
+mv nombre_fichero_origen ruta_destino => mover un fichero
+find término_búsqueda => buscar
+find / -name 'fichero.txt' 2>/dev/null (el 2> envía los errores al dev/null)
+             '*.txt'
+             'fichero.*'
+
+sudo apt install nombre_aplicacion_a_instalar => instalar aplicación dentro de los repos de linux
+sudo apt update => actualizar repositorios
+sudo apt remove nombre_aplicacion_a_desinstalar => desinstalar aplicación
+sudo apt autoremove => desinstala dependencias muertas (recomendable tras desinstalar alguna aplicación)
+sudo dpkg -i nombre_archivo_.deb => instalar aplicación .deb
+sudo apt install synaptic => aplicación para gestionar aplicaciones instaladas
+sudo apt install gdebi => aplicación para instalar otras aplicaciones
+
+grep 'termino' *
+grep 'termino' fichero.txt
+grep -n 'termino' fichero.txt => línea dentro del fichero
+cat fichero.txt | grep -n 'termino' => pipe del cat y haces grep
+cat fichero.txt | grep -v 'termino' => te quita el termino del resultado del cat
+cat fichero.txt | grep -v -E 'termino1|termino2' => te quita el termino1 y termino2 del resultado del cat
+cat fichero.txt | tr -d ':' => quitar : del resultado del cat
+cat fichero.txt | tr ':' '-' => sustituir : por '-' del resultado del cat
+cat fichero.txt | sed 's/pepito/fulanito/g' => sustituir todos los  pepito por fulanito del resultado del cat
+cat /etc/passwd | tr ':' ' ' | awk '{print $1}' => se sutituye los : por ' ' y el awk trabajo por columnas separadas por espacios y se le dice que pinte la primera columna 
+cat fichero.txt | cut -c 1-5 => saca los carácteres del 1 al 5 de cada línea del dichero
+cat fichero.txt | cut -d 'x' -f 1,3 => a partir del caracter 'x' devuelve de 1 a 3 caracteres
+sudo chmod u-w archivo => quitar permisos de escritura para archivo para el usuario actual
+sudo chmod u-r archivo => quitar permisos de lectura para archivo para el usuario actual
+sudo chmod u-x archivo => quitar permisos de ejecución para archivo para el usuario actual
+sudo chmod u+rwx archivo => dar todo los permisos  para archivo para el usuario actual
+sudo chmod g+r archivo => dar permisos a los usuarios del grupo de lectura para el archivo
+sudo chmod o+r archivo => dar permisos a otros susuarios de lectura para el archivo
+whoami => te dice tu usuario
+su nombre_usuario => cambiar usuario
